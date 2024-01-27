@@ -1,5 +1,5 @@
 // ConsoleApplication1.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+//IF A BUILD ERROR OCCURS SDL MAY NEED TO BE REINSTALLED
 
 #include <iostream>
 #include "SDL.h"
@@ -22,7 +22,7 @@ int createSet(const double r, const double i) {
     int n = 0;
     double zr = 0;
     double zi = 0;
-    while (modulus(zr, zi) != true && n < 100) {
+    while (modulus(zr, zi) != true && n < 50) {
         double tempr = zr;
         zr = (zr * zr) + (zi * zi * -1) + r; //when squaring complex numbers the real component is the real numbers squared and the imaginary component squared. Imaginary component is multiplied by -1 as i squared = -1
         if (zr == 0) //if there is no zr component the way zi gets computed is different (cannot expand the brackets) 
@@ -93,7 +93,7 @@ int main()
             double point_x = lerp(-2, 2, i);
             double point_y = lerp(-2, 2, j);
             int iterations = createSet(point_x, point_y);
-            if (iterations == 100) 
+            if (iterations == 50) 
             {
                 SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255); //black used to show c is within set
                 SDL_RenderDrawPointF(renderer, i * 1000, j * 1000);
