@@ -1,6 +1,6 @@
 // ConsoleApplication1.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //IF A BUILD ERROR OCCURS SDL MAY NEED TO BE REINSTALLED
-
+//to help with drawing set in SDL this tutorial was used https://www.youtube.com/watch?v=fWP29aVVycA
 #include <iostream>
 #include "SDL.h"
 #include <thread>
